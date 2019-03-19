@@ -1,0 +1,18 @@
+import sys
+import pygame
+from pygame.locals import *
+pygame.init()
+fps = 60
+clock = pygame.time.Clock()
+width = 1280
+height = 720
+screen = pygame.display.set_mode((width, height))
+ 
+while True:
+  screen.fill((0, 0, 0))
+  for event in pygame.event.get():
+    if event.type == pygame.QUIT:
+      pygame.quit()
+      sys.exit()
+  pygame.display.flip()
+  clock.tick(fps)
